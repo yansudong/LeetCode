@@ -39,6 +39,19 @@ class Solution(object):
             tmp_nums = nums[k:]
             if j in tmp_nums:
                 return [k - 1, tmp_nums.index(j) + k]
+           
+    def twoSum3(self, nums, target):  # mine
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        k = len(nums)
+        for i in range(0, k, 1):
+            for j in range(i+1, k, 1):
+                if  (nums[i] + nums[j]) == target:
+                    return [i, j]
+
 
 
 if __name__ == '__main__':
